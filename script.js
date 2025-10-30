@@ -64,6 +64,7 @@ if(sortSelect){
   });
 }
 
+
 function openPopup(b){
   document.getElementById('book-popup').style.display='flex';
   document.getElementById('popup-cover').src=b.cover;
@@ -71,9 +72,57 @@ function openPopup(b){
   document.getElementById('popup-author').textContent=b.author;
   document.getElementById('popup-category').textContent=b.category;
   document.getElementById('popup-isbn').textContent=b.isbn;
-  document.getElementById('popup-availability').textContent=b.available ? "Available" : "Not Available";
+  document.getElementById('popup-availability').textContent=b.available?"Available":"Not Available";
 }
 
 function closePopup(){
   document.getElementById('book-popup').style.display='none';
+}
+
+// ISSUE / RETURN SECTION
+const formArea=document.getElementById('form-area');
+if(formArea){
+  document.getElementById('issue-btn').onclick=()=>{
+    formArea.innerHTML=`
+      <h3>Issue Book</h3>
+      <input type='text' placeholder='Book ID'>
+      <input type='text' placeholder='User ID'>
+      <input type='date'>
+      <button onclick="showReport()">Submit</button>
+    `;
+  };
+  document.getElementById('return-btn').onclick=()=>{
+    formArea.innerHTML=`
+      <h3>Return Book</h3>
+      <input type='text' placeholder='Book ID'>
+      <input type='text' placeholder='User ID'>
+      <button onclick="showPaymentSuccess()">Submit</button>
+    `;
+  };
+}
+
+function showReport(){
+  document.getElementById('report-popup').style.display='flex';
+  document.getElementById('total-users').textContent=10;
+  document.getElementById('total-borrowed').textContent=5;
+}
+
+function generatePDF(){
+  alert('PDF Generated Successfully!');
+}
+function generateExcel(){
+  alert('Excel Report Generated!');
+}
+
+function showPaymentSuccess(){
+  document.getElementById('payment-popup').style.display='flex';
+  setTimeout(()=>document.getElementById('payment-popup').style.display='none',3000);
+}
+
+// ADMIN DASHBOARD
+const dashboard=document.getElementById('dashboard-content');
+if(dashboard){
+  document.getElementById('user-btn').onclick=()=>dashboard.innerHTML=`<h3>Users Logged In: 5</h3><p>Last Login: 30-Oct-2025</p>`;
+  document.getElementById('books-btn').onclick=()=>dashboard.innerHTML=`<h3>Books Available: ${books.filter(b=>b.available).length}</h3>`;
+  document.getElementById('payments-btn').onclick=()=>dashboard.innerHTML=`<h3>Payments Made: 4</h3><p>Total Amount: KES 1,200</p>`;
 }
