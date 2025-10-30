@@ -1,7 +1,7 @@
 const books = [
   {id:1,title:"Atomic Habits",author:"James Clear",category:"Self-help",isbn:"9780735211292",cover:"assets/covers/book1.jpg",available:true},
   {id:2,title:"Rich Dad Poor Dad",author:"Robert Kiyosaki",category:"Finance",isbn:"9781612680194",cover:"assets/covers/book2.jpg",available:true},
-  {id:3,title:"1984",author:"George Orwell",category:"Fiction",isbn:"9780451524935",cover:"assets/covers/book3.jpg",available:true},
+  {id:3,title:"1984",author:"George Orwell",category:"Fiction",isbn:"9780451524935",cover:"1984.jpg",available:true},
   {id:4,title:"To Kill a Mockingbird",author:"Harper Lee",category:"Classic",isbn:"9780061120084",cover:"assets/covers/book4.jpg",available:true},
   {id:5,title:"The Great Gatsby",author:"F. Scott Fitzgerald",category:"Classic",isbn:"9780743273565",cover:"assets/covers/book5.jpg",available:true},
   {id:6,title:"The 7 Habits of Highly Effective People",author:"Stephen R. Covey",category:"Motivational",isbn:"9780743269513",cover:"assets/covers/book6.jpg",available:true},
@@ -93,3 +93,4 @@ if(dashboard){
   document.getElementById('books-btn').onclick=()=>dashboard.innerHTML=`<h3>Books Available: ${books.filter(b=>b.available).length}</h3>`;
   document.getElementById('payments-btn').onclick=()=>dashboard.innerHTML=`<h3>Payments Made: 4</h3><p>Total Amount: KES 1,200</p>`;
 }
+
