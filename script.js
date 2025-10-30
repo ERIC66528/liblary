@@ -8,7 +8,7 @@ const books = [
   {id:7,title:"The Power of Now",author:"Eckhart Tolle",category:"Spiritual",isbn:"9781577314806",cover:"assets/covers/book7.jpg",available:true},
   {id:8,title:"Deep Work",author:"Cal Newport",category:"Productivity",isbn:"9781455586691",cover:"assets/covers/book8.jpg",available:true},
   {id:9,title:"Start With Why",author:"Simon Sinek",category:"Leadership",isbn:"9781591842804",cover:"assets/covers/book9.jpg",available:true},
-  {id:10,title:"The Subtle Art of Not Giving a F*ck",author:"Mark Manson",category:"Self-help",isbn:"9780062457714",cover:"assets/covers/book10.jpg",available:true},
+  {id:10,title:"The Odyssey",author:"Mark Manson",category:"Self-help",isbn:"9780062457714",cover:"assets/covers/book10.jpg",available:true},
   {id:11,title:"Becoming",author:"Michelle Obama",category:"Biography",isbn:"9781524763138",cover:"assets/covers/book11.jpg",available:true},
   {id:12,title:"Think and Grow Rich",author:"Napoleon Hill",category:"Finance",isbn:"9780449214923",cover:"assets/covers/book12.jpg",available:true},
   {id:13,title:"The Alchemist",author:"Paulo Coelho",category:"Fiction",isbn:"9780062315007",cover:"assets/covers/book13.jpg",available:true},
@@ -126,3 +126,4 @@ if(dashboard){
   document.getElementById('books-btn').onclick=()=>dashboard.innerHTML=`<h3>Books Available: ${books.filter(b=>b.available).length}</h3>`;
   document.getElementById('payments-btn').onclick=()=>dashboard.innerHTML=`<h3>Payments Made: 4</h3><p>Total Amount: KES 1,200</p>`;
 }
+
