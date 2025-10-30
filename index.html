@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Library Management System</h1>
+  <nav>
+    <a href="issue_return.html">Issue/Return</a>
+    <a href="admin_dashboard.html">Admin Dashboard</a>
+  </nav>
+</header>
+
+<section id="book-list"></section>
+
+<div id="book-popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img id="popup-cover" alt="Book Cover">
+    <h2 id="popup-title"></h2>
+    <p><strong>Author:</strong> <span id="popup-author"></span></p>
+    <p><strong>Category:</strong> <span id="popup-category"></span></p>
+    <p><strong>ISBN:</strong> <span id="popup-isbn"></span></p>
+    <p><strong>Availability:</strong> <span id="popup-availability"></span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
